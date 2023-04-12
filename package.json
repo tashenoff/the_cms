@@ -1,0 +1,24 @@
+{
+    "name": "my-theme",
+    "version": "1.0.0",
+    "description": "My OctoberCMS theme",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run production",
+        "production": "NODE_ENV=production npx tailwindcss -i ./assets/css/app.scss -o ./assets/css/app.css --minify",
+        "watch": "NODE_ENV=production npx tailwindcss -i ./assets/css/app.scss -o ./assets/css/app.css --watch",
+        "dev": "npm run watch"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.21",
+        "postcss-cli": "^10.1.0",
+        "postcss-import": "^15.1.0",
+        "postcss-scss": "^4.0.6",
+        "tailwindcss": "^3.3.1"
+    },
+    "dependencies": {
+        "postcss-nested": "^6.0.1",
+        "swiper": "^9.2.0"
+    }
+}

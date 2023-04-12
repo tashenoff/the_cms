@@ -1,0 +1,25 @@
+.floating-btn {
+    @apply fixed bottom-5 right-5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 70 ;
+  }
+  
+  .floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .floating-btn svg {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+  }
+  
+  .floating-btn:active {
+    background-color: #444;
+  }

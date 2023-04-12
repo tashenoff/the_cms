@@ -1,0 +1,113 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>October CM0S - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/app.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'assets/vendor/swiper/swiper-bundle.min.css'|theme }}">
+
+    {% styles %}
+</head>
+
+<body class="bg-gray flex flex-col h-full">
+    <div class="overlay_menu"></div>
+
+    <!-- Header -->
+    <header id="layout-header">
+        {% partial 'header' %}
+    </header>
+
+   
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'footer' %}
+    </footer>
+
+        {% partial 'modal-callback' %}
+
+
+
+        <a href="tel:+77761604911" class="floating-btn bg-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+            </svg>
+
+
+        </a>
+
+
+
+    
+      <!-- Scripts -->
+    <script src="{{ 'assets/vendor/swiper/swiper-bundle.min.js'|theme }}"></script>
+
+
+         <!-- Initialize Swiper -->
+         <script>
+            var swiper = new Swiper(".mySwiper", {
+    
+                slidesPerView: 1.1,
+                centeredSlides: true,
+                spaceBetween: 20,
+                initialSlide: 1,
+                loop: true,
+                mousewheel: false,
+    
+                navigation: {
+                    prevEl: '.slider-arrow__left',
+                    nextEl: '.slider-arrow__right'
+                },
+    
+                // Responsive breakpoints
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    // when window width is >= 640px
+                    640: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10
+                    }
+                },
+    
+    
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+    
+      {% scripts %}
+
+
+</body>
+
+</html>

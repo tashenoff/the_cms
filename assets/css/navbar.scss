@@ -163,7 +163,7 @@
 .header__hamburger-line {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    @apply bg-secondary;
     margin: 5px 0;
     transition: transform 0.3s ease-in-out;
 }

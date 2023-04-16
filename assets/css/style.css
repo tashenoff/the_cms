@@ -264,6 +264,19 @@ button[disabled] {
 }
 
 
+.bg-banner__about::after {
+    content: '';
+    background-image: url('../img/mw.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+
 .home::after{
     content: '';
     width: 100%;

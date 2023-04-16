@@ -1,4 +1,4 @@
-<header class="header w-full z-70 fixed">
+
   <div class=" container mx-auto ">
     <div class="flex justify-between w-full">
     <div class="header__left">
@@ -8,17 +8,14 @@
         </a>
       </div>
       <nav class="menu">
-        <ul class="menu__list text-white">
-          <li class="menu__item text-sm lg:bg-transparent bg-primaryLight"><a href="#home" class="menu__link">Главная</a></li>
-          <li class="menu__item text-sm lg:bg-transparent bg-primaryLight"><a href="#about" class="menu__link">О нас</a></li>
-          <li class="menu__item text-sm lg:bg-transparent bg-primaryLight"><a href="#service" class="menu__link">Услуги</a></li>
-          <li class="menu__item text-sm lg:bg-transparent bg-primaryLight"><a href="#contact" class="menu__link">Контакты</a></li>
+        <ul class="menu__list ">
+          {% partial 'menu' %}
         </ul>
       </nav>
     </div>
     <div class="header__right">
       <a href="tel:87761604911" class="header__phone">8 776 160 49 11</a>
-      <button id="my_request1" class="request-btn header__callback">Заказать звонок</button>
+      <button id="my_request2" class="request-btn header__callback">Заказать звонок</button>
     </div>
   
     <div class="header__hamburger">
@@ -28,6 +25,6 @@
     </div>
   </div>
 </div>
-  </header>
+
 
 

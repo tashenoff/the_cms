@@ -90,7 +90,50 @@ footer {
     
 }
 
-footer::before {
+main{
+    flex-grow: 1;
+ 
+}
+
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  
+  .bg-pages{
+    background-image: url('../img/gg.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+
+  .bg-pages__title{
+  
+    font-weight: bold;
+    color: #fff;
+  }
+
+
+
+
+  .bg-pages::after{
+    content: '';
+    background-color: rgb(14 23 51 / 65%);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+
+/* footer::before {
     content: '';
     background-color: rgb(0 0 0 / 90%);
     width: 100%;
@@ -98,19 +141,12 @@ footer::before {
     z-index: 0;
     top: 0;
     position: absolute;
-}
+} */
 
 .card-img svg {
     width: 100%;
 }
 
-.bg-sale {
-    background-image: url('/staticfiles/../img/bg/4.jpg');
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .bg-sale::before {
     content: '';
@@ -196,10 +232,28 @@ footer::before {
 .home {
     height: 100vh;
     background-position-y: bottom;
-    background-image: url('../img/3.jpg');
+    background-image: url('../img/SL-010720-26810-44.jpg');
 }
 
 .home::before {
+    content: '';
+    background: rgba(15, 33, 54, .7);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+.bg-banner__about{
+    background-image: url('../img/SL-010720-26810-44.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.bg-banner__about::before {
     content: '';
     background: rgba(15, 33, 54, .7);
     width: 100%;
@@ -214,7 +268,7 @@ footer::before {
     content: '';
     width: 100%;
     height: 100%;
-    background-image: url(https://raw.githubusercontent.com/pixelgriff/codepen-projects/main/earth-hour-landing-page/earth.png);
+    background-image: url(../img/earth.png);
     background-position-x: center;
     z-index: 0;
     position: absolute;
@@ -791,9 +845,21 @@ nav.scroll {
     
 }
 
+html {
+    height: 100%;
+  }
+
+  
 body {
     background: transparent;
+    margin: 0;
+  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
+
+  
 
 .background {
     zoom: 0.65;
@@ -2335,7 +2401,7 @@ body {
     position: relative;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 
@@ -2345,6 +2411,7 @@ body {
         margin-left: 0px;
         margin-right: 0px;
         height: 100%;
+        margin-top: 100px;
     
     }
     
@@ -2506,13 +2573,15 @@ body {
 }
 
 .footer-bottom {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0px;
     left: 0px;
+    flex-shrink: 0;
     z-index: 50;
     width: 100%;
     border-top-width: 1px;
-    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+ 
+    
    
     --tw-border-opacity: 0.2;
     padding: 1.25rem;

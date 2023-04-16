@@ -48,14 +48,6 @@
             });
 
 
-            const btn_bot = document.querySelector('#scroll-bot');
-            const target = document.querySelector('#about');
-
-            btn_bot.addEventListener('click', () => {
-                const y = target.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            });
-
 
             const modal = document.getElementById("form_request");
             const btn = document.querySelectorAll('.request-btn');
@@ -80,3 +72,35 @@
             });
 
 
+       
+            $("#scroll-bot").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#about").offset().top
+                }, 800);
+            });
+
+
+
+            $(document).ready(function() {
+                $('form').on('input', function() {
+                  var nameInput = $('#name');
+                  var emailInput = $('#email');
+                  var submitBtn = $('#simpleContactSubmitButton');
+                  
+                  if (nameInput.val() !== '' && emailInput.val() !== '' && nameInput[0].checkValidity() && emailInput[0].checkValidity()) {
+                    submitBtn.prop('disabled', false);
+                  } else {
+                    submitBtn.prop('disabled', true);
+                  }
+                });
+              });
+              
+            //   const form = document.querySelector('form'); // получить форму
+            //   const submitButton = form.querySelector('button[type="submit"]'); // получить кнопку отправки формы
+              
+            //   form.addEventListener('submit', (event) => {
+            //     event.preventDefault(); // предотвратить отправку формы повторно
+            //     submitButton.disabled = true; // сделать кнопку отправки формы неактивной
+            //     form.reset(); // очистить форму
+            //   });
+                 

@@ -1,0 +1,96 @@
+description = "Secondary layout"
+
+[genericForm]
+rules[name] = "required"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+messages_partial = "thx.htm"
+reset_form = 0
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/app.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'assets/vendor/swiper/swiper-bundle.min.css'|theme }}">
+
+    {% styles %}
+
+    {% partial 'analitics' %}
+</head>
+
+<body class="bg-gray">
+
+
+    <div class="overlay_menu"></div>
+
+    <!-- Header -->
+    <header class="header w-full relative z-70 bg-white text-primary">
+        {% partial 'navbar-white' %}
+    </header>
+
+    <main>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="contact">
+        {% partial 'footer' %}
+    </footer>
+
+    {% partial 'modal-callback' %}
+
+
+
+    <a href="tel:+77761604911" class="floating-btn bg-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+        </svg>
+
+
+    </a>
+
+
+    <!-- Scripts -->
+   
+
+ 
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+
+
+
+    {% framework extras %}
+    {% scripts %}
+
+
+    {% scripts %}
+
+
+
+
+</body>
+
+
+</html>

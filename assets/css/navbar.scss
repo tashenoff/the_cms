@@ -55,7 +55,7 @@
   
   .header__phone {
     margin-right: 10px;
-    color: white;
+    
   }
   
   .header__callback {
@@ -68,8 +68,8 @@
 
   @media screen and (max-width: 768px) {
     .header__callback {
-        padding: 10px 12px!important;
-        margin-right: 10px;
+      padding: 3px 7px!important;
+      margin-right: 6px;
     }
 
   }
@@ -118,6 +118,7 @@
     .menu__item {
         width: 100%;
         border-bottom: 1px solid #0e1733;
+        @apply text-white;
         
     }
     
@@ -133,7 +134,7 @@
         opacity: 1;
         visibility: visible;
         z-index: 80;
-        top:81px;
+        top: 71px;
     }
     
     .header__right {

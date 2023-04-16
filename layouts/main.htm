@@ -4,6 +4,8 @@ description = "Default layout"
 rules[name] = "required"
 messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
+messages_partial = "thx.htm"
+reset_form = 1
 inline_errors = "disabled"
 sanitize_data = "disabled"
 anonymize_ip = "disabled"
@@ -29,105 +31,112 @@ emails_date_format = "Y-m-d"
     <link rel="stylesheet" href="{{ 'assets/vendor/swiper/swiper-bundle.min.css'|theme }}">
 
     {% styles %}
+
+    {% partial 'analitics' %}
+
 </head>
 
-<body class="bg-gray flex flex-col h-full">
+<body class="bg-gray">
 
-    
+
     <div class="overlay_menu"></div>
 
     <!-- Header -->
-    <header id="layout-header">
-        {% partial 'header' %}
+    <header class="header w-full text-white z-70 fixed">
+        {% partial 'navbar-dark' %}
     </header>
 
-   
+    <main>
 
-    <!-- Content -->
-    <section id="layout-content">
-        {% page %}
-    </section>
-
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+    </main>
     <!-- Footer -->
-    <footer id="layout-footer">
+    <footer id="contact">
         {% partial 'footer' %}
     </footer>
 
-   {% partial 'modal-callback' %}
+    {% partial 'modal-callback' %}
 
 
 
-        <a href="tel:+77761604911" class="floating-btn bg-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-white">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
-            </svg>
+    <a href="tel:+77761604911" class="floating-btn bg-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+        </svg>
 
 
-        </a>
+    </a>
 
 
-      <!-- Scripts -->
+    <!-- Scripts -->
     <script src="{{ 'assets/vendor/swiper/swiper-bundle.min.js'|theme }}"></script>
 
 
 
-         <!-- Initialize Swiper -->
-         <script>
-            var swiper = new Swiper(".mySwiper", {
-    
-                slidesPerView: 1.1,
-                centeredSlides: true,
-                spaceBetween: 20,
-                initialSlide: 1,
-                loop: true,
-                mousewheel: false,
-    
-                navigation: {
-                    prevEl: '.slider-arrow__left',
-                    nextEl: '.slider-arrow__right'
-                },
-    
-                // Responsive breakpoints
-                breakpoints: {
-                    // when window width is >= 320px
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10
-                    },
-                    // when window width is >= 480px
-                    480: {
-                        slidesPerView: 1,
-                        spaceBetween: 10
-                    },
-                    // when window width is >= 640px
-                    640: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 10
-                    }
-                },
-    
-    
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-        </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
 
-    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+            slidesPerView: 1.1,
+            centeredSlides: true,
+            spaceBetween: 20,
+            initialSlide: 1,
+            loop: true,
+            mousewheel: false,
+
+            navigation: {
+                prevEl: '.slider-arrow__left',
+                nextEl: '.slider-arrow__right'
+            },
+
+            // Responsive breakpoints
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10
+                }
+            },
+
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+ 
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-    
-        {% framework extras %}
-      {% scripts %}
-    
-    
-      {% scripts %}
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
 
-  
 
-     
+
+    {% framework extras %}
+    {% scripts %}
+
+
+    {% scripts %}
+
+
+
+
 </body>
 
 

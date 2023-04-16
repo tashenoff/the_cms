@@ -1,0 +1,30 @@
+
+  <div class=" container mx-auto ">
+    <div class="flex justify-between w-full">
+    <div class="header__left">
+      <div class="header__logo">
+        <a href="/" class="logo">
+          <img class="lg:w-[150px] w-[100px] h-[16px]" src="{{ 'assets/img/logo-d.svg'|theme }}" alt="">
+        </a>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list ">
+            {% partial 'menu' %}
+        </ul>
+      </nav>
+    </div>
+    <div class="header__right">
+      <a href="tel:87761604911" class="header__phone">8 776 160 49 11</a>
+      <button id="my_request2" class="request-btn header__callback">Заказать звонок</button>
+    </div>
+  
+    <div class="header__hamburger">
+      <div class="header__hamburger-line"></div>
+      <div class="header__hamburger-line"></div>
+      <div class="header__hamburger-line"></div>
+    </div>
+  </div>
+</div>
+
+
+

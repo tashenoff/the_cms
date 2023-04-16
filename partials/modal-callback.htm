@@ -1,5 +1,4 @@
-==
-== <div id="form_request" class="modal z-70 fixed w-full h-screen top-0 left-0 flex items-center justify-center">
+<div id="form_request" class="modal z-70 fixed w-full h-screen top-0 left-0 flex items-center justify-center">
     <div class="modal-overlay absolute w-full  h-full bg-primary opacity-80"></div>
 
     <div class="modal-container bg-white relative z-70 lg:w-1/2 lg:mx-0 mx-5 rounded shadow-lg overflow-y-auto">
@@ -35,21 +34,29 @@
                     <div id="{{ genericForm }}_forms_flash"></div>
 
                     <div class="form-group w-full mb-5">
-
                         <input type="text" placeholder="Ваше имя:" id="name" name="name"
-                            class="form-control w-full border p-2 border-primary border-opacity-25">
+                            class="form-control w-full border p-2 border-primary border-opacity-25" required>
+                        <div data-validate-for="name"></div>
                     </div>
 
                     <div class="form-group w-full">
-
                         <input type="text" placeholder="+7 (__)___ __ __" id="email" name="email"
-                            class="form-control w-full border p-2 border-primary border-opacity-25 mb-5">
+                            class="form-control w-full border p-2 border-primary border-opacity-25 mb-5" required>
                     </div>
 
-                    <button id="simpleContactSubmitButton" type="submit"
-                        class="bg-secondary w-full btn text-white">Отправить</button>
+                    <button id="simpleContactSubmitButton" type="submit" class="bg-secondary w-full btn text-white mb-2"
+                        disabled>Отправить</button>
+
+                      <div class="my-3 w-full text-center">
+                        <span class="text-sm">Отправляя данную форму, вы подтверждаете <br> свое согласие на <a class="text-sm underline" href="/policy">обработку персональных данных</a></span>
+                    </div>
+                        
 
                 </form>
+
+
+
+
 
             </div>
         </div>

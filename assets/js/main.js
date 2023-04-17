@@ -105,4 +105,14 @@
             //   });
                  
 
-              
+            const floatingBtn = document.querySelector('.floating-btn');
+            const folioBlock = document.querySelector('#folio');
+            
+            window.addEventListener('scroll', () => {
+              if (window.pageYOffset + window.innerHeight >= folioBlock.offsetTop) {
+                floatingBtn.classList.add('hidden');
+              } else {
+                floatingBtn.classList.remove('hidden');
+              }
+            });
+            

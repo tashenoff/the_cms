@@ -4,7 +4,8 @@ module.exports = {
     "./pages/*.htm",
     "./partials/*.htm",
     "./layouts/*.htm",
-    "./assets/css/*.scss"
+    "./assets/css/*.scss",
+    "./assets/css/*.css"
   ],
  
   theme: {

@@ -85,8 +85,8 @@
 }
 
 footer {
-    background-image: url('../img/1.jpg');
-    position: relative;
+    
+    @apply bg-primary;
     
 }
 
@@ -2592,14 +2592,8 @@ body {
     flex-shrink: 0;
     z-index: 50;
     width: 100%;
-    border-top-width: 1px;
- 
     
-   
-    --tw-border-opacity: 0.2;
-    padding: 1.25rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+ 
     
 }
 

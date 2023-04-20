@@ -8,8 +8,18 @@
         </a>
       </div>
       <nav class="menu">
-        <ul class="menu__list ">
-            {% partial 'menu' %}
+        <ul class="menu__list">
+          <li class="menu__item lg:bg-transparent bg-primaryLight"><a href="/" class="menu__link">Главная</a></li>
+          <li class="menu__item lg:bg-transparent bg-primaryLight"><a href="about" class="menu__link">О нас</a></li>
+          <li class="menu__item lg:bg-transparent bg-primaryLight menu__item--has-dropdown group">
+            <a href="#service" class="menu__link menu__link--has-dropdown">Услуги</a>
+            <ul class="menu__dropdown lg:bg-white lg:shadow-lg lg:absolute relative hidden lg:group-hover:block ">
+              <li class="menu__dropdown-item lg:hover:bg-gray border-y border-primary border-opacity-25"><a href="/service1" class="menu__dropdown-link">Продвижение сайта</a></li>
+              <li class="menu__dropdown-item lg:hover:bg-gray border-b border-primary border-opacity-25"><a href="/service2" class="menu__dropdown-link">Рекламное агенство</a></li>
+              <li class="menu__dropdown-item lg:hover:bg-gray border-b border-primary border-opacity-25"><a href="/support" class="menu__dropdown-link">Техническая поддержка</a></li>
+            </ul>
+          </li>
+          <li class="menu__item text-sm lg:bg-transparent bg-primaryLight"><a href="contacts" class="menu__link">Контакты</a></li>
         </ul>
       </nav>
     </div>

@@ -10,6 +10,8 @@ module.exports = {
  
   theme: {
     extend: {
+      backgroundColor: ["group-hover"],
+      divideColor: ['group-hover'],
         colors: {
             primary: '#0e1733',
             darkLight: '#0c162d',

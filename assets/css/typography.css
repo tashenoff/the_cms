@@ -1,0 +1,5 @@
+.title-lg{
+   @apply lg:text-4xl text-4xl uppercase text-lg;
+   font-family: JetBrainsMono,sans-serif;
+   line-height: 1.5; 
+}

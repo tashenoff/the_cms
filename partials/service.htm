@@ -1,18 +1,16 @@
 <div class="service-banner">
-    <div
-        class="absolute -top-11 w-20 h-20 text-primary p-1 bg-white rounded-full shadow-xl flex items-center justify-center">
 
-        <img src="{{ 'assets/img/service.svg'|theme}}" alt="">
-
-    </div>
+    <div class="container mx-auto">
     <div class="service-banner__head">
-        <h1 class="service-banner__subTitle">Разработка сайтов по передовым технологиям</h1>
-        <span class="service-banner__title">Наши услуги</span>
-        <div class="w-10 h-1 bg-secondary lg:mt-10 mt-5"></div>
+       
+            <h1 class="service-banner__subTitle mb-5">Разработка сайтов по передовым технологиям</h1>
+            <span class="title-lg">Наши услуги</span>
+            
+        </div>
+        <p class="help-block__desc">Предлагаем полный спектр услуг в области интернет-маркетинга для малого,<br>
+            среднего и крупного бизнеса по всему Казахстану и странам СНГ.
+        </p>
     </div>
-    <p class="service-banner__desc ">Предлагаем полный спектр услуг в области интернет-маркетинга для малого,
-        среднего и крупного бизнеса по всему Казахстану и странам СНГ.
-    </p>
 </div>
 
 
@@ -166,36 +164,7 @@
         </div>
 
 
-        <div class="help-block rounded-lg relative overflow-hidden">
-
-            <div class="background absolute w-full top-0 left-0 z-50">
-                <div class="star1 star"></div>
-                <div class="star2 star"></div>
-                <div class="star3 star"></div>
-                <div class="star4 star"></div>
-            </div>
-
-
-            <div class="help-block__inner group">
-                <div class="help-block__content">
-                    <h1 class="help-block__title">
-                        Помочь с выбором?</h1>
-
-
-                    <p class="help-block__desc">Иногда не сразу понятно какой сайт нужен именно Вам. <br>Наш специалист
-                        готов Вас проконсультировать и ответить на все интересующие вопросы.
-
-                    </p>
-
-                </div>
-
-                <div class="relative py-10 z-50">
-                    <a href="https://wa.me/+77781647391" class="btn bg-secondary w-full">
-                        Связаться со специалистом
-                    </a>
-                </div>
-            </div>
-        </div>
+        {% partial 'w_included' %}
 
 
     </div>

@@ -46,11 +46,11 @@
   
   .menu__link {
     display: block;
-    padding: 10px;
+    @apply px-2 hover:text-secondary;
     text-transform: uppercase;
     
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
   
 
@@ -61,16 +61,16 @@
   }
   
   .header__callback {
-    padding: 10px 20px;
+   
     border: none;
-    @apply rounded-sm bg-secondary font-bold;
-    color: #fff;
+    @apply rounded-sm font-bold;
+   
     cursor: pointer;
   }
 
   @media screen and (max-width: 768px) {
     .header__callback {
-      padding: 3px 7px!important;
+   
       margin-right: 6px;
     }
 
@@ -250,6 +250,8 @@
   .menu__dropdown-link {
     display: block;
     padding: 20px;
+    @apply hover:text-secondary;
+    @apply ease-out duration-300;
     text-align: left;
   }
 

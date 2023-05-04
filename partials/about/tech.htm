@@ -1,0 +1,150 @@
+<div class="container mx-auto relative ">
+    <div class="bg-white shadow-lg p-5">
+
+        <h3 class="title-lg">ТЕХНОЛОГИИ Которые мы используем</h3>
+        <p>Мировые достижения в сфере интернет-технологий имеют огромную ценность для нашей деятельности. В своей работе
+            мы используем гибкий подход и работаем со всеми методологиями управления проектами - Agile, Scrum, Kanban, в
+            зависимости от сложности и задач проекта. При разработке интернет-проектов мы профессионально работаем на
+            HTML5, CSS3, jQuery и Bootstrap, с зарекомендовавшими себя CMS-системами и программными платформами:</p>
+
+
+
+
+
+        <div class="relative w-full mt-10">
+            <div class="slider-container mx-10 ">
+                <div class="swiper mySwiper ">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                            <div class="flex items-center justify-center">
+                                <img src="{{ 'assets/img/1.png'|theme }}" alt="">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="swiper-slide">
+
+                            <div class="flex items-center justify-center border border-primary border-opacity-10">
+                                <img src="{{ 'assets/img/6.png'|theme }}" alt="">
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="swiper-slide">
+
+                            <div class="flex items-center justify-center border border-primary border-opacity-10">
+                                <img src="{{ 'assets/img/3.png'|theme }}" alt="">
+                            </div>
+
+
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <div class="flex items-center justify-center border border-primary border-opacity-10">
+                                <img src="{{ 'assets/img/4.png'|theme }}" alt="">
+                            </div>
+
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-center">
+                                <img src="{{ '5.png'|theme }}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="absolute top-10 left-0 right-0 flex justify-between z-60">
+                <a href="" class="slider-arrow__left p-2 ">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+
+
+                </a>
+                <a href="" class="slider-arrow__right p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+
+                </a>
+            </div>
+
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+
+<!-- Scripts -->
+<script src="{{ 'assets/vendor/swiper/swiper-bundle.min.js'|theme }}"></script>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+
+        loopedSlides: 8,
+        loop: true,
+        slidesPerView: "auto",
+        freeMode: true,
+
+        navigation: {
+            prevEl: '.slider-arrow__left',
+            nextEl: '.slider-arrow__right'
+        },
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            }
+        },
+
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
